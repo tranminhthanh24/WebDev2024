@@ -121,14 +121,6 @@ section{
    height: 40px;
 }
 
-.header .navbar .logo span{
-   font-weight: bold;
-   font-size: 20px;
-   display: flex;
-   align-items: center;
-   color: var(--main-color);
-}
-
 .header .navbar .flex ul{
    list-style: none;
 }
