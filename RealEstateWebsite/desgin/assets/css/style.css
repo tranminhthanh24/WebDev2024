@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400&display=swap');
 
+.box {
+   border-radius: 20px;  
+}
+
 :root{
    --main-color:#2179FF;
    --light-color:#666;
