@@ -1,180 +1,249 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sell Your Product</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f5f5f5;
-        }
-        .container {
-            width: 60%;
-            margin: 50px auto;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        header {
-            text-align: center;
-            padding: 20px;
-            background-color: #007bff;
-            color: white;
-            margin-bottom: 20px;
-        }
-        header img {
-            width: 50px;
-            height: 50px;
-            vertical-align: middle;
-        }
-        header h1 {
-            display: inline;
-            margin-left: 10px;
-            font-size: 24px;
-        }
-        form {
-            display: flex;
-            flex-direction: column;
-        }
-        .form-group {
-            display: flex;
-            align-items: center;
-            margin-bottom: 15px;
-        }
-        label {
-            margin-right: 10px;
-            width: 150px;
-            font-weight: bold;
-        }
-        input[type="text"], input[type="number"], textarea, input[type="file"] {
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            width: 100%;
-            box-sizing: border-box;
-        }
-        textarea {
-            resize: vertical;
-        }
-        button {
-            padding: 15px;
-            background-color: #28a745;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-            width: 150px;
-            align-self: center;
-        }
-        button:hover {
-            background-color: #218838;
-        }
-        .image-preview {
-            width: 100px;
-            height: 100px;
-            border: 1px solid #ddd;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 10px 0;
-        }
-        .image-preview img {
-            max-width: 100%;
-            max-height: 100%;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sell</title>
+
+  <!-- font awesome cdn link  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+  <!-- custom css file link  -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <title>Amenities Options</title>
+  <style>
+      body {
+          font-family: Arial, sans-serif;
+          margin: 0;
+          padding: 20px;
+      }
+      .form-group {
+          margin-bottom: 20px;
+      }
+      .form-group label {
+          font-size: 20px; /* Increased font size for the main label */
+          font-weight: bold;
+      }
+      .amenities-options {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 20px; /* Adds spacing between items */
+          margin-top: 15px; /* Adds space between the label and checkboxes */
+      }
+      .amenities-options label {
+          display: flex;
+          align-items: center;
+          font-size: 18px; /* Increase font size for the checkboxes' labels */
+          padding: 10px;
+          cursor: pointer;
+          background-color: #f8f9fa;
+          border: 1px solid #ddd;
+          border-radius: 8px;
+          box-sizing: border-box;
+          width: 250px; /* Increase width for labels */
+          transition: background-color 0.3s, border 0.3s;
+      }
+      .amenities-options input[type="checkbox"] {
+          width: 20px; /* Make the checkbox larger */
+          height: 20px; /* Make the checkbox larger */
+          margin-right: 10px;
+          cursor: pointer;
+          transform: scale(1.5); /* Increase size of the checkbox */
+      }
+      .amenities-options label:hover {
+          background-color: #e9ecef;
+          border-color: #007bff;
+      }
+      .amenities-options input[type="checkbox"]:checked + label {
+          background-color: #007bff;
+          color: white;
+          border-color: #007bff;
+      }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <!-- Header Section with Logo -->
-        <header>
-            <img img src="../assets/images/logo-g12.svg" alt="Group Logo">
-            <h1>Sell Your Product</h1>
-        </header>
 
-        <!-- Form Section -->
-        <form action="" method="POST" enctype="multipart/form-data">
-            <div class="form-group">
-                <img src="../assets/images/icon-3.png" alt="Product Icon" width="24" height="24">
-                <label for="productName">Product Name:</label>
-                <input type="text" id="productName" name="productName" required>
-            </div>
+<!--header section start-->
 
-            <div class="form-group">
-                <img src="../assets/images/icon-4.png" alt="Description Icon" width="24" height="24">
-                <label for="productDescription">Product Description:</label>
-                <textarea id="productDescription" name="productDescription" rows="5" required></textarea>
-            </div>
+<header class="header">
 
-            <div class="form-group">
-                <img src="../assets/images/money-icon.png" alt="Price Icon" width="24" height="24">
-                <label for="price">Price ($):</label>
-                <input type="number" id="price" name="price" step="0.01" min="0" required>
-            </div>
+  <nav class="navbar">
+    <section class="flex">
+      <div id="menu-btn" class="fas fa-bars"></div>
 
-            <div class="form-group">
-                <img src="../assets/images/step-1.png" alt="Upload Icon" width="24" height="24">
-                <label for="productImage">Upload Product Image:</label>
-                <input type="file" id="productImage" name="productImage" accept="image/*" required>
-            </div>
-            <div class="owner" id="Owner section">
-                <img src="../assets/images/landlord.svg" alt="Owner Icon" width="24" height="24">
-                <label for="Owner">Owner:</label>
-                <textarea type="text    " id="Owner" name="owner-info" rows="10"  required></textarea>
-            </div>
-            <div class="address" id="Address">
-                <img src="../assets/images/address.svg" alt="Address" width="24" height="24">
-                <label for="Address">Address:</label>
-                <input type="text" id="Address" name="address-info" required>
-            </div>
-            <!-- Image Preview Section (Optional, JavaScript Needed for Functionality) -->
-            <div class="image-preview" id="imagePreview">
-                <span>Image Preview</span>
-            </div>
-            <div class="form-group">
-    <label for="amenities">Amenities:</label>
-    <div class="amenities-options">
-        <label><input type="checkbox" name="amenities" value="WiFi"> WiFi</label>
-        <label><input type="checkbox" name="amenities" value="Parking"> Parking</label>
-        <label><input type="checkbox" name="amenities" value="Swimming Pool"> Swimming Pool</label>
-        <label><input type="checkbox" name="amenities" value="Gym"> Gym</label>
-        <label><input type="checkbox" name="amenities" value="Air Conditioning"> Air Conditioning</label>
-        <label><input type="checkbox" name="amenities" value="Laundry Service"> Laundry Service</label>
-        <label><input type="checkbox" name="amenities" value="Security"> Security</label>
-        <label><input type="checkbox" name="amenities" value="Garden"> Garden</label>
-        <label><input type="checkbox" name="amenities" value="Pet Friendly"> Pet Friendly</label>
-        <label><input type="checkbox" name="amenities" value="Good Neighbour">Good Neighbour</label>
-    </div>
+      <a href="home.html" class="logo">
+        <img src="../assets/images/logo-g12.svg" alt="Group Logo">
+      </a>
+
+      <div class="menu">
+        <ul>
+          <li><a href="#">Buy<i class="fas fa-angle-down"></i></a>
+            <ul>
+              <li><a href="house.html">House</a></li>
+              <li><a href="flat.html">Flat</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Rent<i class="fas fa-angle-down"></i></a>
+            <ul>
+              <li><a href="#">House</a></li>
+              <li><a href="#">Flat</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Sell</a></li>
+        </ul>
+      </div>
+
+      <ul>
+        <li><a href="#">Help<i class="fas fa-angle-down"></i></a>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="contact.html#faq">FAQ</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Account <i class="fas fa-angle-down"></i></a>
+          <ul>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="register.html">Register</a></li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+  </nav>
+</header>
+
+<!--header section end-->
+
+<div class="sell">
+
+  <section class="center">
+
+    <form action="sell.html" method="post">
+      <h3>Post your property</h3>
+      <div class="box">
+        <p>Your full name <span>*</span></p>
+        <input type="text" name="name" required maxlength="50" placeholder="Enter your name" class="input">
+      </div>
+      <div class="box">
+        <p>Location<span>*</span></p>
+        <input type="text" name="location" required maxlength="80" placeholder="Enter property's location" class="input">
+      </div>
+      <div class="flex">
+        <div class="box">
+          <p>Property Type <span>*</span></p>
+          <select name="type" class="input" required>
+            <option value="flat">Flat</option>
+            <option value="house">House</option>
+          </select>
+        </div>
+        <div class="box">
+          <p>BHK Numbers <span>*</span></p>
+          <select name="bhk" class="input" required>
+            <option value="1">1 BHK</option>
+            <option value="2">2 BHK</option>
+            <option value="3">3 BHK</option>
+            <option value="4">4 BHK</option>
+            <option value="5">5 BHK</option>
+            <option value="6">6 BHK</option>
+            <option value="7">7 BHK</option>
+            <option value="8">8 BHK</option>
+            <option value="9">9 BHK</option>
+          </select>
+        </div>
+        <div class = "box">
+          <p>Status <span>*</span></p>
+          <select name="status" class="input required">
+            <option value="1">Ready to move</option>
+            <option value="0">On progressing</option>
+          </select>
+        </div>
+        <div class = "box">
+          <p>Loan <span>*</span></p>
+          <select name="loan" class="input required">
+            <option value="1">Available</option>
+            <option value="0">Not available</option>
+          </select>
+        </div>
+        <div class="box">
+          <label for="area">Carpet area</label>
+          <input type="number" id="area" name="square" class="input" placeholder="Enter your carpet area" required>
+        </div>
+        <div class="box">
+          <label for="floors">Floor(s) <span>*</span></label>
+          <input type="number" id="floors" name="price" class="input" placeholder="Enter number of floor(s)" required>
+        </div>
+      </div>
+      <div class="box">
+        <p>Description</p>
+        <input type="text" name="description" required maxlength="200" placeholder="Enter your description" class="input">
+      </div>
+
+      <div class="box">
+        <label for="property-image">Upload Property Image <span>*</span></label>
+        <input type="file" id="property-image" name="property-image" accept="image/*" class="input" required>
+      </div>
+      <div class="form-group">
+        <label for="amenities">Amenities:</label>
+        <div class="amenities-options">
+            <label><input type="checkbox" name="amenities" value="WiFi"> WiFi</label>
+            <label><input type="checkbox" name="amenities" value="Parking"> Parking</label>
+            <label><input type="checkbox" name="amenities" value="Swimming Pool"> Swimming Pool</label>
+            <label><input type="checkbox" name="amenities" value="Gym"> Gym</label>
+            <label><input type="checkbox" name="amenities" value="Air Conditioning"> Air Conditioning</label>
+            <label><input type="checkbox" name="amenities" value="Laundry Service"> Laundry Service</label>
+            <label><input type="checkbox" name="amenities" value="Security"> Security</label>
+            <label><input type="checkbox" name="amenities" value="Garden"> Garden</label>
+            <label><input type="checkbox" name="amenities" value="Pet Friendly"> Pet Friendly</label>
+            <label><input type="checkbox" name="amenities" value="Good Neighbour">Good Neighbour</label>
+        </div>
+      <div class="box">
+        <label for="price">Price <span>*</span></label>
+        <input type="number" id="price" name="price" class="input" placeholder="Enter your offer price" required>
+      </div>
+
+      <input type="submit" value="Post your property" class="btn">
+    </form>
+
+  </section>
+
 </div>
-            <button type="submit">List Product</button>
-        </form>
+
+
+<!-- footer section starts  -->
+
+<footer class="footer">
+
+  <section class="flex">
+
+    <div class="box">
+      <a href="home.html"><span>Home</span></a>
+      <a href="about.html"><span>About</span></a>
+      <a href="contact.html"><span>Contact</span></a>
+      <a href="listings.html"><span>All Listings</span></a>
     </div>
 
-    <script>
-        // JavaScript for Image Preview (optional)
-        const imageInput = document.getElementById('productImage');
-        const imagePreview = document.getElementById('imagePreview');
+    <div class="box">
+      <a href="#"><i class="fas fa-phone"></i><span>123456789</span></a>
+      <a href="#"><i class="fas fa-phone"></i><span>1112223333</span></a>
+      <a href="#"><i class="fas fa-envelope"></i><span>abcde@gmail.com</span></a>
+      <a href="#"><i class="fas fa-map-marker-alt"></i><span>Hanoi, Vietnam - 000084</span></a>
+    </div>
 
-        imageInput.addEventListener('change', function() {
-            const file = this.files[0];
-            if (file) {
-                const reader = new FileReader();
-                imagePreview.innerHTML = ''; // Clear existing preview
+    <div class="box">
+      <a href="#"><span>Facebook</span><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><span>Twitter</span><i class="fab fa-twitter"></i></a>
+      <a href="#"><span>Instagram</span><i class="fab fa-instagram"></i></a>
 
-                reader.onload = function(event) {
-                    const imgElement = document.createElement('img');
-                    imgElement.src = event.target.result;
-                    imagePreview.appendChild(imgElement);
-                };
+    </div>
 
-                reader.readAsDataURL(file);
-            }
-        });
-    </script>
+  </section>
+
+  <div class="credit">&copy; G12 Real Estate Listing Website</div>
+
+</footer>
+
+<!-- footer section ends -->
+
 </body>
 </html>
