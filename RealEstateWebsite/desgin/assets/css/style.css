@@ -394,6 +394,17 @@ section{
    color: var(--main-color);
 }
 
+.listings .box-container .box .price{
+   padding-top: 1rem;
+   font-size: 1.6rem;
+   color: var(--light-color);
+}
+
+.listings .box-container .box .price i{
+   margin-right: 1rem;
+   color: var(--main-color);
+}
+
 .listings .box-container .box .flex{
    display: flex;
    background-color: var(--light-bg);
