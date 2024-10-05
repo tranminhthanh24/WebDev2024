@@ -235,6 +235,60 @@ section{
    color: var(--main-color);
 }
 
+
+.sell {
+   padding: 4rem 2rem;
+   max-width: 80%;
+   margin: 0 auto;
+   background-color: var(--white);
+   box-shadow: var(--box-shodow);
+}
+
+.sell .center form {
+   display: flex;
+   flex-direction: column;
+   gap: 2rem;
+}
+
+.sell .center .box {
+   width: 100%;
+}
+
+.sell .center form .box label {
+   font-size: 1.6rem;
+   color: var(--black);
+}
+
+.sell .center form .input {
+   width: 100%;
+   padding: 1.4rem;
+   border: var(--border);
+   font-size: 1.6rem;
+   color: var(--black);
+   border-radius: 5px;
+}
+
+.sell .center form .flex .box {
+   flex: 1 1 48%;
+   margin-bottom: 1.5rem;
+}
+
+.sell .center form.btn {
+   width: 100%;
+   padding: 1.5rem;
+   background-color: var(--main-color);
+   font-size: 2rem;
+   text-transform: uppercase;
+   color: var(--white);
+   cursor: pointer;
+   transition: 0.3s;
+}
+
+.sell .center form .btn:hover {
+   background-color: var(--black);
+}
+
+
 .services .box-container{
    display: grid;
    grid-template-columns: repeat(auto-fit, 30rem);
@@ -863,19 +917,6 @@ section{
 .form-container form p a:hover{
    text-decoration: underline;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .footer{
    background-color: var(--black);
