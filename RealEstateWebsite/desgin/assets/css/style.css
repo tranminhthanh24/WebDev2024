@@ -1205,25 +1205,24 @@ section{
 .search-bar {
    display: flex;
    align-items: center;
- }
- 
- .search-bar input {
+}
+
+.search-bar input {
    padding: 8px;
    border: 1px solid #ccc;
    border-radius: 4px;
    margin-right: 10px;
- }
- 
- .search-bar button {
+}
+
+.search-bar button {
    padding: 8px;
-   background-color: #006064; /* Match this to your theme */
+   background-color: #006064; 
    color: white;
    border: none;
    border-radius: 4px;
    cursor: pointer;
- }
- 
- .search-bar button i {
+}
+
+.search-bar button i {
    font-size: 16px;
- }
- 
+}
