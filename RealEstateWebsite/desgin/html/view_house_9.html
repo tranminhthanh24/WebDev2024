@@ -33,12 +33,14 @@
                   <ul>
                      <li><a href="house.html">House</a></li>
                      <li><a href="flat.html">Flat</a></li>
+                     <li><a href="listings_buy.html">All Listings</a> </li>
                   </ul>
                </li>
                <li><a href="#">Rent<i class="fas fa-angle-down"></i></a>
                   <ul>
-                     <li><a href="#">House</a></li>
-                     <li><a href="#">Flat</a></li>
+                     <li><a href="house_rent.html">House</a></li>
+                     <li><a href="flat_rent.html">Flat</a></li>
+                     <li><a href="listings_rent.html">All Listings</a> </li>
                   </ul>
                </li>
                <li><a href="sell.html">Sell</a></li>
@@ -64,6 +66,7 @@
    </nav>
 </header>
 
+
 <!-- header section ends -->
 
 <!-- view property section starts  -->
@@ -83,17 +86,17 @@
             <img src="../assets/images/house-img-9-4.webp" alt="">
          </div>
       </div>
-      <h3 class="name">Modern house</h3>
+      <h3 class="name">Modern House</h3>
       <p class="location"><i class="fas fa-map-marker-alt"></i><span>Hanoi, Vietnam - 000084</span></p>
       <div class="info">
          <p><i class="fas fa-tag"></i><span>X VND</span></p>
          <p><i class="fas fa-user"></i><span>John Doe (owner)</span></p>
          <p><i class="fas fa-phone"></i><a href="#">1234567890</a></p>
-         <p><i class="fas fa-building"></i><span>Flat</span></p>
-         <p><i class="fas fa-house"></i><span>Sale</span></p>
+         <p><i class="fas fa-house"></i><span>House</span></p>
+         <p><i class="fas fa-money-check"></i><span>Sale</span></p>
          <p><i class="fas fa-calendar"></i><span>MM-DD-YYYY</span></p>
       </div>
-      <h3 class="title">details</h3>
+      <h3 class="title">Details</h3>
       <div class="flex">
          <div class="box">
             <p><i>Rooms :</i><span>2 BHK</span></p>
@@ -140,6 +143,47 @@
 
 </section>
 
+<div class="contact-container">
+
+   <!-- Left Section: Agent Information -->
+   <div class="agent-info">
+      <img src="../assets/images/pic-1.png" alt="Agent Photo" class="agent-photo">
+      <h2>John Doe</h2>
+      <div class="contact-details">
+         <p><strong>Contact number:</strong> 1234567890</p>
+         <p><strong>Email:</strong><a href="#">abcde@gmail.com</a></p>
+      </div>
+   </div>
+
+   <!-- Right Section: Contact Form -->
+   <div class="contact-form">
+      <h3>Interested? Let's get in touch.</h3>
+      <form action="" method="POST">
+         <div class="form-group">
+            <label for="first-name">First Name</label>
+            <input type="text" id="first-name" name="first-name" placeholder="First Name" required>
+         </div>
+         <div class="form-group">
+            <label for="last-name">Last Name</label>
+            <input type="text" id="last-name" name="last-name" placeholder="Last Name" required>
+         </div>
+         <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="Email Address" required>
+         </div>
+         <div class="form-group">
+            <label for="phone">Phone Number (Optional)</label>
+            <input type="text" id="phone" name="phone" placeholder="Phone Number (Optional)">
+         </div>
+         <div class="form-group">
+            <label for="message">Message (Optional)</label>
+            <textarea id="message" name="message" rows="5" placeholder="Leave your message here"></textarea>
+         </div>
+         <button type="submit" class="submit-btn">Send Message</button>
+      </form>
+   </div>
+</div>
+
 <!-- view property section ends -->
 
 <!-- footer section starts  -->
@@ -152,8 +196,7 @@
          <a href="home.html"><span>Home</span></a>
          <a href="about.html"><span>About</span></a>
          <a href="contact.html"><span>Contact</span></a>
-         <a href="listings.html"><span>All Listings</span></a>
-      </div>
+         <a href="all_listings.html"><span>All Listings</span></a>      </div>
 
       <div class="box"> 
          <a href="#"><i class="fas fa-phone"></i><span> +84-24 37 91 69 60</span></a>
