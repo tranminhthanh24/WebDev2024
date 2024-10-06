@@ -9,8 +9,6 @@ Students are expected to:
 
 Student Info
 =======================
-
-* Name: Nguyen Tuan Khiem
-* ID: BI12-210
+* 22BI13412	Trần Minh Thành
 * Group ID: 12
 * Project Name: Real Estate Listings Website
