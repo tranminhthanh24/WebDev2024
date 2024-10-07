@@ -1,5 +1,3 @@
-
-
 let menu = document.querySelector('.header .menu');
 
 document.querySelector('#menu-btn').onclick = () => {
@@ -22,3 +20,24 @@ document.querySelectorAll('.faq .box-container .box h3').forEach(headings => {
       headings.parentElement.classList.toggle('active');
    };
 });
+
+document.getElementById("searchForm").addEventListener("submit", function(event) {
+   event.preventDefault();  
+   
+   let searchQuery = document.getElementById("searchInput").value.trim();
+   
+   if (searchQuery) {
+       window.location.href = `search_results.html?query=${encodeURIComponent(searchQuery)}`;
+   } else {
+       alert("Please enter a search term.");
+   }
+});
+
+const urlParams = new URLSearchParams(window.location.search);
+const query = urlParams.get('query');
+
+if (query) {
+    document.getElementById('query').textContent = query;
+} else {
+    document.getElementById('query').textContent = 'No search term provided';
+}
