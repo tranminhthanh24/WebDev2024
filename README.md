@@ -8,7 +8,7 @@ Students are expected to:
 
 # Student Info
 
-- Name: 
-- ID:
+- Name: Trần Minh Thành
+- ID: 22BI13412
 - Group ID: 12
 - Project Name: Real Estate Listings Website
