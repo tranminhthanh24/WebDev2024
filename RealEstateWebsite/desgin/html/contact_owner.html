@@ -82,7 +82,7 @@
         </div>
         <form action="" method="post">
           <h3>Contact to the owner</h3>
-          <h3>John Doe</h3>
+          <h3>Tran Minh Thanh</h3>
 
           <label>
             <input
@@ -90,10 +90,12 @@
               name="name"
               required
               maxlength="50"
-              placeholder="Enter your name"
+              placeholder="enter your name"
               class="box"
+              oninput="this.value = this.value.replace(/[^a-zA-Z\s]/g, '');"
             />
           </label>
+          
           <label>
             <input
               type="email"
@@ -104,18 +106,20 @@
               class="box"
             />
           </label>
+
           <label>
             <input
-              type="number"
-              name="number"
+              type="text"
+              name="Number"
               required
               maxlength="10"
-              max="9999999999"
-              min="0"
-              placeholder="Enter your number"
+              placeholder="enter your phone number"
               class="box"
+              pattern="\d{10}"
+              oninput="this.value = this.value.replace(/[^0-9]/g, '');"
             />
           </label>
+          
           <label>
             <textarea
               name="message"
