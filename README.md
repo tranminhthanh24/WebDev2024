@@ -8,7 +8,7 @@ Students are expected to:
 
 # Student Info
 
-- Name: Nguyễn Hoàng Trung
-- ID: 22BI13438
+- Name: Trần Minh Thành
+- ID: 22BI13412
 - Group ID: 12
 - Project Name: Real Estate Listings Website
